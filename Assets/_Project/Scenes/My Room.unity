@@ -207,9 +207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d009e37e32d93e4c973b2ebc3d18953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameInput: {fileID: 1466065934}
-  connectButton: {fileID: 1481010227}
-  networkManager: {fileID: 1361587633}
+  _nameInput: {fileID: 1466065934}
+  _connectButton: {fileID: 1481010227}
+  _networkManager: {fileID: 1361587633}
 --- !u!114 &506050355
 MonoBehaviour:
   m_ObjectHideFlags: 0
