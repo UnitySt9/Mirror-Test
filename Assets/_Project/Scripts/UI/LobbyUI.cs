@@ -18,13 +18,15 @@ namespace _Project.Scripts
 
         private void OnConnectClicked()
         {
-            if (string.IsNullOrWhiteSpace(_nameInput.text))
+            string playerName = _nameInput.text;
+            
+            if (string.IsNullOrWhiteSpace(playerName))
             {
-                Debug.LogWarning("Player name cannot be empty!");
-                return;
+                playerName = "Player_" + Random.Range(1000, 9999);
+                Debug.Log($"Generated random player name: {playerName}");
             }
             
-            PlayerPrefs.SetString("PlayerName", _nameInput.text);
+            PlayerPrefs.SetString("PlayerName", playerName);
             _networkManager.StartClient();
             gameObject.SetActive(false);
         }
